@@ -1,0 +1,737 @@
+﻿body, html, div, ul, li, input, img {
+    padding: 0;
+    margin: 0;
+    /*display: block;*/
+    /*font: normal 0.9rem/1.5 'microsoft yahei';*/
+    font-family: "Helvetica Neue",Helvetica,"微软雅黑",Arial,sans-serif;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+    a:visited {
+        text-decoration: none;
+    }
+
+span {
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-size: 14px;
+    /*font: normal 0.9rem/1.5 'microsoft yahei';*/
+}
+
+#btnSearch {
+    margin-right: 5px;
+}
+
+input {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+/*取消按钮*/
+a.canel {
+    background-color: #ffffff;
+}
+/*确定按钮*/
+a.sure {
+    background-color: #f58726;
+    color: white;
+}
+
+/*登录开始*/
+.login div, .login ul, .login li, .login input, .login img {
+    padding: 0;
+    margin: 0;
+    display: block;
+    /*font: normal 0.8rem/1.5 'microsoft yahei';*/
+    overflow: hidden;
+}
+
+.login a {
+    text-decoration: none;
+}
+
+/*.login span {
+    font: normal 1rem/1.5 'microsoft yahei';
+}*/
+
+.login input {
+    outline: none;
+}
+
+.login input {
+    background-color: transparent;
+    border-style: none;
+}
+
+.login {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 7px;
+    position: absolute;
+    top: 29%;
+    left: 5%;
+    z-index: 998;
+    background-color: #efeff4;
+    display: none;
+}
+
+    .login .div {
+        width: 89%;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+
+        .login .div span {
+            float: left;
+        }
+
+        .login .div .content {
+            float: left;
+            width: 88%;
+            height: 2.5rem;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            font-size: 1.2rem;
+        }
+
+        .login .div .titile {
+            width: 24%;
+            height: 2.3rem;
+            line-height: 2.3rem;
+        }
+
+        .login .div .text {
+            position: relative;
+        }
+
+        .login .div .textb {
+            float: left;
+            width: 29%;
+            height: 2.3rem;
+        }
+
+        .login .div .code {
+            width: 90%;
+            float: left;
+            border-radius: 7px;
+            height: 2.3rem;
+            padding-left: 12%;
+            position: absolute;
+            top: 5%;
+            font-size: 1.2rem;
+            /* line-height: 2.3rem; */
+        }
+
+        .login .div .codeBtn {
+            border-radius: 3px;
+            margin-left: 9%;
+            width: 33%;
+            background-color: #76A6E1;
+            border-style: none;
+            color: white;
+            height: 2.3rem;
+            float: left;
+            line-height: 2.3rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+    .login .tooltip {
+        text-align: center;
+        width: 100%;
+        font-size: 4vw;
+        margin-top: 2%;
+        color: red;
+    }
+
+    .login .div:last-child {
+        margin-top: 2%;
+    }
+
+    .login > .title {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        color: #919191;
+        font-size: 1.4rem;
+    }
+
+    .login .cancelBtn {
+        border-radius: 3px;
+        margin-left: 15%;
+        width: 33%;
+        background-color: #fff;
+        border-style: none;
+        height: 2.3rem;
+        float: left;
+        line-height: 2.3rem;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .login .sureBtn {
+        border-radius: 3px;
+        margin-left: 9%;
+        width: 33%;
+        background-color: #f98b29;
+        border-style: none;
+        color: white;
+        height: 2.3rem;
+        float: left;
+        line-height: 2.3rem;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .login .fenge {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 2%;
+        /*height: 2px;*/
+    }
+
+/*登录结束*/
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -64px;
+    margin-top: -64px;
+    display: none;
+    z-index: 998;
+}
+
+/*遮罩*/
+.orderingMask, .loadingMask, .loginMask {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: black;
+    z-index: 998;
+    width: 100%;
+    opacity: 0.5;
+    display: none;
+}
+
+body > .orderingTips {
+    position: absolute;
+    z-index: 998;
+    top: 50%;
+    left: 50%;
+    background-color: #efeff4;
+    border-radius: 7px;
+    margin-left: -42%;
+    margin-top: -35%;
+    width: 84%;
+}
+
+    body > .orderingTips > .secondConfirmation {
+    }
+
+        body > .orderingTips > .secondConfirmation > .title {
+            text-align: center;
+            margin: 5% 0;
+            color: #919191;
+            font-size: 1.5rem;
+            display: block;
+        }
+
+        body > .orderingTips > .secondConfirmation .hengxian {
+            width: 90%;
+            height: 1px;
+            margin: 0 auto;
+            margin-top: -1%;
+        }
+
+        body > .orderingTips > .secondConfirmation > .content {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 5%;
+            background-color: #ffffff;
+            border-radius: 7px;
+            border: 1px #cccccc solid;
+        }
+
+        body > .orderingTips > .secondConfirmation > a {
+            margin-top: 7%;
+            margin-left: 9%;
+        }
+
+        body > .orderingTips > .secondConfirmation > .content > .contents {
+            width: 100%;
+            float: left;
+            margin: 5% 0;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        body > .orderingTips > .secondConfirmation > .content > .cost {
+            width: 100%;
+            float: left;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            color: #717171;
+            text-align: center;
+        }
+
+        body > .orderingTips > .secondConfirmation > .content > .effectiveImmediately {
+            width: 100%;
+        }
+
+            body > .orderingTips > .secondConfirmation > .content > .effectiveImmediately > div {
+                margin-top: 7%;
+            }
+
+                body > .orderingTips > .secondConfirmation > .content > .effectiveImmediately > div > div {
+                    float: left;
+                    width: 33%;
+                    margin-left: 10%;
+                }
+
+                    body > .orderingTips > .secondConfirmation > .content > .effectiveImmediately > div > div img {
+                        width: 19%;
+                        float: left;
+                    }
+
+                    body > .orderingTips > .secondConfirmation > .content > .effectiveImmediately > div > div span {
+                        height: 6vw;
+                        line-height: 5vw;
+                        float: left;
+                        margin-left: 3%;
+                        color: #717171;
+                        font-size: 4vw;
+                    }
+
+    body > .orderingTips > .completePromptsOrder {
+        display: none;
+        margin: 7%;
+    }
+
+        body > .orderingTips > .completePromptsOrder > .success {
+            text-align: center;
+            display: none;
+            margin: 7%;
+        }
+
+        body > .orderingTips > .completePromptsOrder > .error {
+            text-align: center;
+            display: none;
+            margin-top: 7%;
+        }
+
+        body > .orderingTips > .completePromptsOrder > .success > span {
+            text-align: center;
+            font-size: 1.3rem;
+            margin: 0 auto;
+            margin-top: 7%;
+        }
+
+        body > .orderingTips > .completePromptsOrder > .error > :first-child {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 0 auto;
+            margin-top: 7%;
+        }
+
+        body > .orderingTips > .completePromptsOrder > img {
+            width: 57%;
+            margin: 0 auto;
+            margin-top: 6%;
+        }
+
+/*弹框遮罩结束*/
+
+.index {
+    height: 90%;
+    overflow: auto;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/*分布视图Main_Footer样式开始*/
+.bottomLink {
+    margin: 5% 0;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+    .bottomLink > span {
+        display: block;
+        text-align: center;
+    }
+
+    .bottomLink span {
+        color: #919191;
+        font-size: 0.8rem;
+    }
+
+    .bottomLink > div > span {
+        display: block;
+        float: left;
+    }
+
+    .bottomLink > div .span {
+        width: 47%;
+    }
+
+        .bottomLink > div .span:first-child {
+            text-align: right;
+        }
+
+        .bottomLink > div .span:last-child {
+            text-align: left;
+        }
+
+    .bottomLink > div > span:nth-child(2) {
+        width: 6%;
+        text-align: center;
+    }
+
+    .bottomLink > div {
+        width: 100%;
+        padding-bottom: 8%;
+    }
+
+    .bottomLink .firstSpan {
+        width: 85%;
+        text-align: center;
+        font-size: 0.8rem;
+        line-height: 2rem;
+        color: #666666;
+        border: 1px solid #cacaca;
+        border-radius: 0.8rem;
+        margin: 4% 0 2% 6%;
+    }
+
+    .bottomLink .secondSpan {
+        margin: 2% 0;
+    }
+/*分布视图Main_Footer样式结束*/
+
+/*头部公共样式*/
+.head {
+    z-index: 999;
+    width: 100%;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+}
+
+.main {
+    overflow: auto;
+}
+
+body {
+    overflow: auto;
+    background-color: #E9EEF4;
+}
+
+.head .firstImg {
+    width: 0.8rem;
+    margin-left: 1rem;
+    margin-top: 0.6rem;
+    float: left;
+    margin-bottom: 0.6rem;
+}
+
+.head span {
+    margin-top: 0.2rem;
+    font-size: 1.4rem;
+    float: left;
+    width: 60%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.head img {
+    float: right;
+    width: 1.5rem;
+    margin-top: 0.6rem;
+    margin-right: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+/*公共样式*/
+.underline {
+    width: 100%;
+}
+
+/*导航*/
+.daohang {
+    background-color: #f5f5f5;
+}
+
+    .daohang > div > span:not(:first-child) {
+        width: 21%;
+        text-align: right;
+    }
+
+    .daohang > div > span {
+        display: block;
+        float: left;
+        overflow: hidden;
+    }
+
+        .daohang > div > span > a {
+            color: #565656;
+            font-size: 1.2rem;
+        }
+
+    .daohang > div {
+        width: 93%;
+        margin: 0 auto;
+        margin-bottom: 0.3rem;
+    }
+
+    .daohang .select {
+        margin-top: 0;
+    }
+
+        .daohang .select a {
+            color: #ff5d00;
+        }
+
+div .btnOrderFun, .btnDownload {
+    border: 1px solid #ed6d00;
+    color: #ed6d00;
+}
+
+div .grey {
+    color: grey;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+#tabs_container i {
+    vertical-align: middle;
+    margin: 0px 5px 0px 0px;
+    padding-bottom: 3px;
+}
+
+/*图片上传区域样式******************/
+.container-after {
+    position: absolute;
+    bottom: 7px;
+    left: 200px;
+}
+
+.img-name {
+    color: coral;
+    margin: 5px auto 5px auto;
+}
+
+.container-before {
+    position: relative;
+}
+
+.pic-before {
+    height: 20px;
+}
+
+.img-before {
+    display: none;
+}
+/*头部自能提示*/
+.tip_container {
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    text-align: left;
+    width: auto;
+    _width: auto;
+}
+
+.mtip > span {
+    vertical-align: 3px;
+    line-height: 1;
+    display: inline-block;
+    width: auto;
+    font-size: 16px;
+}
+
+.mtip {
+    border-radius: 0 0 4px 4px;
+    padding-top: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+}
+
+    .mtip.error {
+        background-color: #BF3358;
+        background-image: -moz-linear-gradient(top,#e34447,#BF3358);
+        background-image: -ms-linear-gradient(top,#e34447,#BF3358);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#e34447),to(#BF3358));
+        background-image: -webkit-linear-gradient(top,#e34447,#BF3358);
+        background-image: -o-linear-gradient(top,#e34447,#BF3358);
+        background-image: linear-gradient(top,#e34447,#BF3358);
+        border: 1px solid #ca3e3e;
+    }
+
+    .mtip.success {
+        background-color: #43ab00;
+        background-image: -moz-linear-gradient(top,#43ab00,#388e00);
+        background-image: -ms-linear-gradient(top,#43ab00,#388e00);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#43ab00),to(#388e00));
+        background-image: -webkit-linear-gradient(top,#43ab00,#388e00);
+        background-image: -o-linear-gradient(top,#43ab00,#388e00);
+        background-image: linear-gradient(top,#43ab00,#388e00);
+        border: 1px solid #338100;
+    }
+
+    .mtip.warning {
+        background-color: orange;
+        background-image: -moz-linear-gradient(top,#0f76cd,#086cc1);
+        background-image: -ms-linear-gradient(top,#0f76cd,#086cc1);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#0f76cd),to(#086cc1));
+        background-image: -webkit-linear-gradient(top,#0f76cd,#086cc1);
+        background-image: -o-linear-gradient(top,#0f76cd,#086cc1);
+        background-image: linear-gradient(top,#0f76cd,#086cc1);
+        border: 1px solid #006096;
+    }
+
+.other-css {
+    height: 40px;
+    width: 35px;
+    font-size: 13px;
+}
+
+.tools_separator {
+    float: left;
+    display: block;
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #fff;
+}
+
+.to-templatepage {
+    padding-right: 10px;
+}
+
+/*layer弹窗自定义样式*/
+
+/*二次确认弹窗*/
+.layer-msg-second {
+    border-top: 3px solid #08A1EF;
+    color: #282828;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 5px;
+}
+
+    .layer-msg-second div.layui-layer-content {
+        line-height: 55px;
+    }
+
+/*默认样式*/
+.layer-msg-default {
+    border-top: 3px solid #08A1EF;
+    color: #282828;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 5px;
+}
+/*成功提示*/
+.layer-msg-success {
+    color: #329d38;
+    background-color: #ddf4df;
+    border-color: #bae8b6;
+    text-align: center;
+    border-radius: 5px;
+}
+/*危险操作提示*/
+.layer-msg-danger {
+    color: #e75033;
+    background-color: #ffe5e0;
+    border-color: #ffc6c7;
+    text-align: center;
+    border-radius: 5px;
+}
+/*警告提示*/
+.layer-msg-warning {
+    color: #ed980f;
+    background-color: #fff0d5;
+    border-color: #ffdcbc;
+    text-align: center;
+    border-radius: 5px;
+    overflow-y: hidden;
+}
+/*下拉滑条设置******************************/
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 0px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(8, 161, 239,0) inset;
+    -webkit-box-shadow: inset 0 0 6px rgba(8, 161, 239,0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    box-shadow: 1px 1px 5px rgba(8, 161, 239,1) inset;
+    -webkit-box-shadow: inset 0 0 6px rgba(8, 161, 239,1);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/*select2下拉框样式覆盖重写*******************************/
+.select2-container {
+    width: 200px;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 0 0 0px;
+    margin-right: 8px;
+}
+
+a:hover {
+    background: none;
+    color: #3280FC;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-right: 10px solid #08A1EF;
+}

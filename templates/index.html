@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="../content/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../content/layer/skin/layer.css" rel="stylesheet" />
+    <link href="../content/css/Base.css" rel="stylesheet" />
+    <link href="../content/css/index.css" rel="stylesheet" />
+    <link href="../content/css/tab-framework.css" rel="stylesheet" />
+    <link href="../content/css/common.css" rel="stylesheet" />
+    <title>内容计费系统</title>
+</head>
+<body>
+    <div>
+        <!--头部-->
+        <div class="header">
+            <!--网站LOGO及标题-->
+            <div class="div-logo-title">
+                <div class="div-title">内容计费系统</div>
+                <!--菜单收缩与展开-->
+                <div class="pull-menu nav-header" data-menu="open" data-toggle="tooltip" data-placement="right" data-trigger="hover" data-original-title="收缩菜单" data-container="div.mainPannel">
+                    <a href="#" role="button">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <!--头部右边-->
+            <div id="Headermenu">
+                <ul id="topnav" class="nav navbar-nav" role="button">
+                    <li class="pull-creat nav-header" style="display: none;">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="创建导航任务" data-container="div.mainPannel" data-trigger="hover">
+                            <i class="fa fa-paper-plane"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="padding-left: 30px;padding-right: 30px;">
+                            <img src="../content/img/adminHead.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="user-header">
+                                <img src="../content/img/adminHead.jpg" class="img-circle" alt="User Image">
+                                <p>
+                                    
+                                    <small id="currentTime"></small>
+                                </p>
+                            </li>
+                            <li class="user-footer">
+                                <div class="pull-loginout">
+                                    <a href="#" class="btn btn-default btn-flat" style="width: 100%;" onclick="evtOnLogOut()">退出</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--主体-->
+        <div class="mainPannel">
+            <!--menu菜单-->
+            <div class="navigation">
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="../content/img/adminHead.jpg" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p></p>
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <ul id="accordion" class="accordion"></ul>
+                    <li class="open">
+                        <a href="#" class="link" data-toggle="tooltip" data-placement="right" data-original-title="内容计费" data-container="div.mainPannel" data-trigger="hover">
+                            <i class="fa fa-paper-plane"></i>
+                            <span>内容计费</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="submenu b-children" style="height: 419px; display: block;">
+                            <li class="hover-li" title="内容计费" onclick="AddTabMenu('11', '/Home/TaskList', '内容计费',  'fa fa-list-ul','true');ChangeIcon(this,true)">
+                                <a data-toggle="tooltip" data-placement="right" data-original-title="内容计费" data-container="div.mainPannel" data-trigger="hover" style="padding-left: 40px;">
+                                    <img class="coin22" src="../content/img/index/coin222.png" style="display: none; left: 35px; top: 0px;"><img class="coin11" src="../Content/img/index/coin111.png" style="left: 35px; top: 0px; display: block;">
+                                    <span style="margin-left:24px">内容计费</span>
+                                    <div class="arrow-left" style="position: absolute; right: 0px; top: 0px; display: block;"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+            </div>
+            <!--tab标签-->
+            <div id="overlay_navigation">
+            </div>
+            <!--数据列表区-->
+            <div id="ContentPannel">
+                <!--tab标签-->
+                <div class="taskbarTabs" style="display: none">
+                    <div style="float: left">
+                        <div id="dww-menu" class="mod-tab">
+                            <div class="mod-hd">
+                                <ul id="tabs_container" class="tab-nav"></ul>
+                            </div>
+                            <input id="ModuleId" type="hidden" />
+                        </div>
+                        <div class="rightMenu">
+                            <ul>
+                                <li onclick="ThisCloseTab()">关闭当前</li>
+                                <li onclick="AllcloseTab()">全部关闭</li>
+                                <li onclick="othercloseTab()">除此之外全部关闭</li>
+                                <div class='m-split'>
+                                </div>
+                                <li>退出</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--内容页-->
+                <iframe class="tabs_iframe" id="tabs_iframe_0" name="tabs_iframe_0" height="100%" width="100%" src="http://localhost:63342/DSP_Statistics/templates/tasklist.html" frameborder="0"></iframe>
+            </div>
+        </div>
+        <!--加载进度条-->
+        <div id="loading" style="display:none;">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../content/js/jquery-2.1.3.min.js"></script>
+<script src="../content/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="../content/Scripts/common.js"></script>
+<script src="../content/layer/layer.js"></script>
+<script src="../content/js/tab-framework.js"></script>
+<script type="text/javascript">
+    var root = GetVirtual();
+    var getMenuUrl = root + "/Api/ValidateApi/GetMenu";    //左侧导航栏元素读取目录
+    var doLogOutUrl = root + "/Api/LoginApi/LogOut";
+    var logUri = root + "/Api/LogApi/Click";
+
+    $('.nav-header [data-toggle="tooltip"],.div-logo-title [data-toggle="tooltip"]').tooltip();
+</script>
+<script src="../content/Scripts/index.js"></script>

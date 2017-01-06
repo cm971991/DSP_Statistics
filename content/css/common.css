@@ -1,0 +1,399 @@
+﻿/*****************************************页面主体样式*****************************************************/
+
+body {
+    font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
+}
+
+.container-fluid {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#main, #report, #sheet {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    border-top: 3px solid #08A1EF;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+}
+
+    #main > div:nth-child(1) {
+        margin-top: 10px;
+    }
+
+    #main > div:nth-child(2) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #main > div > .col-md-4:nth-child(1) {
+        padding-left: 0;
+        line-height: 35px;
+    }
+
+    #main > div > div:nth-child(2) {
+        padding-right: 0;
+        text-align: right;
+    }
+
+#popupAddOrEdit {
+    margin: 0 auto;
+}
+
+
+/***************************************layer confirm框样式***********************************************/
+
+.dspconfirm {
+    min-width: 520px !important;
+    text-align: center;
+    border: 2px solid #08A1EF;
+    color: steelblue;
+}
+
+    .dspconfirm > div.layui-layer-content {
+        font-size: 16px;
+        font-weight: bolder;
+    }
+
+    .dspconfirm > .layui-layer-btn {
+        text-align: center !important;
+    }
+
+    .dspconfirm > div > a {
+        border-radius: 4px;
+        display: inline-block;
+        padding: 4px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+    }
+
+        .dspconfirm > div > a:first-child {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+
+            .dspconfirm > div > a:first-child :hover {
+                color: #fff;
+                background-color: #286090;
+                border-color: #204d74;
+            }
+
+        .dspconfirm > div > a:last-child {
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+
+            .dspconfirm > div > a:last-child:hover {
+                color: #333;
+                background-color: #e6e6e6;
+                border-color: #adadad;
+            }
+
+
+
+/***************************************layer msg框样式***********************************************/
+
+.dspwarning {
+    min-width: 520px !important;
+    border-radius: 4px !important;
+    color: #a94442;
+    background-color: #f2dede !important;
+    border: 1px solid #ebccd1 !important;
+}
+
+    .dspwarning > div:first-child {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+.dspsuccess {
+    min-width: 520px !important;
+    border-radius: 4px !important;
+    color: #3c763d;
+    background-color: #dff0d8 !important;
+    border: 1px solid #d6e9c6 !important;
+}
+
+    .dspsuccess > div:first-child {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+
+/***************************************表格垂直居中样式***********************************************/
+
+th {
+    vertical-align: middle !important;
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+span {
+    display: inline-block;
+    zoom: 1;
+}
+
+bg {
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    background: #3D3C3A;
+}
+
+title {
+    height: 20px;
+    border-radius: 10px;
+    background: #55404C;
+}
+
+
+
+/*********************************************表格按钮样式***********************************************/
+
+.dspBtn {
+    font-weight: normal;
+    height: 25px;
+    padding: 2px 6px;
+    margin-right: 6px;
+}
+
+.dspToolBtn {
+    color: black;
+    cursor: pointer;
+    margin-right: 16px;
+    font-size: 14px;
+}
+
+    .dspToolBtn > i {
+        margin-right: 5px;
+    }
+
+    .dspToolBtn:hover {
+        color: #08A1EF;
+        text-decoration: none;
+    }
+
+.dspTableFirstColumns {
+    padding-left: 20px !important;
+}
+
+.dspTableIdColumns {
+    font-weight: bolder;
+}
+
+
+/*********************************************表格分页栏样式***********************************************/
+
+#dataTable_wrapper > div:last-child {
+    line-height: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #F7F7F7;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+    #dataTable_wrapper > div:last-child > div:nth-child(1) {
+        line-height: 25px;
+    }
+
+#dataTable_wrapper > div:nth-child(2) {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/*********************************************loading效果***********************************************/
+
+#loading {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 20000;
+    margin-top: 0px;
+    top: 0px;
+    opacity: 0.4;
+}
+
+#loading-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    -webkit-animation: loading-center-absolute 1s infinite;
+    animation: loading-center-absolute 1s infinite;
+}
+
+.object {
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    float: left;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+    .object:nth-child(2n+0) {
+        margin-right: 0px;
+    }
+
+#object_one {
+    -webkit-animation: object_one 1s infinite;
+    animation: object_one 1s infinite;
+}
+
+#object_two {
+    -webkit-animation: object_two 1s infinite;
+    animation: object_two 1s infinite;
+}
+
+#object_three {
+    -webkit-animation: object_three 1s infinite;
+    animation: object_three 1s infinite;
+}
+
+#object_four {
+    -webkit-animation: object_four 1s infinite;
+    animation: object_four 1s infinite;
+}
+
+@-webkit-keyframes loading-center-absolute {
+    100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-center-absolute {
+    100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes object_one {
+    50% {
+        -ms-transform: translate(20px,20px);
+        -webkit-transform: translate(20px,20px);
+        transform: translate(20px,20px);
+    }
+}
+
+@keyframes object_one {
+    50% {
+        -ms-transform: translate(20px,20px);
+        -webkit-transform: translate(20px,20px);
+        transform: translate(20px,20px);
+    }
+}
+
+@-webkit-keyframes object_two {
+    50% {
+        -ms-transform: translate(-20px,20px);
+        -webkit-transform: translate(-20px,20px);
+        transform: translate(-20px,20px);
+    }
+}
+
+@keyframes object_two {
+    50% {
+        -ms-transform: translate(-20px,20px);
+        -webkit-transform: translate(-20px,20px);
+        transform: translate(-20px,20px);
+    }
+}
+
+@-webkit-keyframes object_three {
+    50% {
+        -ms-transform: translate(20px,-20px);
+        -webkit-transform: translate(20px,-20px);
+        transform: translate(20px,-20px);
+    }
+}
+
+@keyframes object_three {
+    50% {
+        -ms-transform: translate(20px,-20px);
+        -webkit-transform: translate(20px,-20px);
+        transform: translate(20px,-20px);
+    }
+}
+
+@-webkit-keyframes object_four {
+    50% {
+        -ms-transform: translate(-20px,-20px);
+        -webkit-transform: translate(-20px,-20px);
+        transform: translate(-20px,-20px);
+    }
+}
+
+@keyframes object_four {
+    50% {
+        -ms-transform: translate(-20px,-20px);
+        -webkit-transform: translate(-20px,-20px);
+        transform: translate(-20px,-20px);
+    }
+}
+
+
+/***************************************滚动条样式***********************************************/
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 0px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(8, 161, 239,0) inset;
+    -webkit-box-shadow: inset 0 0 6px rgba(8, 161, 239,0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    box-shadow: 1px 1px 5px rgba(8, 161, 239,1) inset;
+    -webkit-box-shadow: inset 0 0 6px rgba(8, 161, 239,1);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

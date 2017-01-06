@@ -1,0 +1,75 @@
+﻿.cmtable {
+    width: 98%;
+    margin: 15px auto;
+    margin-bottom: 50px;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+    .cmtable .tdbg .td-title {
+        width: 120px;
+        height: 40px;
+        text-align: right;
+        vertical-align: middle;
+    }
+
+    .cmtable .tdbg .td-content {
+        text-align: left;
+        position: relative;
+    }
+
+        .cmtable .tdbg .td-content input[type="text"] {
+            width: 100%;
+            margin-left: 3px;
+        }
+
+        .cmtable .tdbg .td-content .textarea {
+            width: 100%;
+            height: 200px;
+            margin-left: 3px;
+            resize: none;
+        }
+
+        .cmtable .tdbg .td-content .td-content select {
+            width: 100%;
+        }
+
+    .cmtable > thead > tr > th, .cmtable > tbody > tr > th, .cmtable > tfoot > tr > th, .cmtable > thead > tr > td, .cmtable > tbody > tr > td, .cmtable > tfoot > tr > td {
+        border: 1px solid #ddd;
+    }
+
+.cmTableTr {
+    width: 100%;
+    min-height: 1px;
+    float: left;
+    margin-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.cmButtonTr {
+    width: 100%;
+    min-height: 1px;
+    float: left;
+    margin-top: 20px;
+    padding: 10px 15px 10px 15px;
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+    clear: both;
+    border-top: 1px solid #bbb;
+    background-color: #F6F6F6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.btnRight {
+    margin-left: 4px;
+}

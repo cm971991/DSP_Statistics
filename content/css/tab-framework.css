@@ -1,0 +1,11 @@
+﻿/*右击菜单begin*/
+.rightMenu{position:fixed;top:-9999px;left:-9999px; z-index:4000; display:none;}
+.rightMenu ul{float:left;padding:2px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; background-color:#fff;border:1px solid #ccc; box-shadow:0 0 8px #ccc;}
+.rightMenu ul li{cursor:pointer;clear:both;height:24px;line-height:24px;white-space:nowrap;padding:0 30px;}
+.rightMenu ul .disabled{cursor:not-allowed;color:#ccc;}
+/*.rightMenu ul li.sub{background-repeat:no-repeat;background-position:right 9px;background-image:url(../Images/Index/arrow.png);}*/
+.rightMenu ul li.active{background-color:#4A5B79; color:#fff;}
+.rightMenu ul ul{display:none;position:absolute; color:#000000;}
+.rightMenu .m-split{height:2px;margin:0 2px;margin-top:1px;margin-bottom:1px; margin-left:26px;}
+.rightMenu li img{position:absolute;border:0px;left:6px;margin-top:4px;width:16px;height:16px;}
+/*右击菜单end*/

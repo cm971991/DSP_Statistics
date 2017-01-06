@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>内容计费系统</title>
+    <link href="../content/bootstrap-datatable/css/bootstrap-3.3.5.min.css" rel="stylesheet" />
+    <link href="../content/bootstrap-datatable/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="../content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../content/layer/skin/layer.css" rel="stylesheet" />
+    <link href="../content/css/common.css" rel="stylesheet" />
+    <link href="../content/cmtable/css/cmtable.css" rel="stylesheet" />
+    <link href="../content/imghover/imagehover.css" rel="stylesheet" />
+    <link href="../content/tageditor/jquery.tag-editor.css" rel="stylesheet" />
+    <link href="../content/css/tasklist.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="main" class="row">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <a id="btnRefresh" class="dspToolBtn"><i class="fa fa-refresh"></i>刷新</a>
+                    <a id="btnAdd" class="dspToolBtn"><i class="fa fa-plus"></i>导入</a>
+                </div>
+                <div class="col-md-8">
+                    <input id="txtQuery" class="form-control" type="text" placeholder="server-ip" />
+                    <button id="btnQuery" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <table id="dataTable" class="table table-hover table-condensed table-bordered" cellspacing="0"></table>
+            </div>
+        </div>
+        <!--触发形态-->
+        <div id="selectNavigation" style="display:none;"></div>
+              <!--导入弹出框-->
+        <div id="popupAddOrEdit" class="row" style="display:none;"></div>
+    </div>
+
+    <script src="../content/js/jquery-2.1.3.js"></script>
+    <script src="../content/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="../content/bootstrap-datatable/js/jquery.dataTables-1.10.10.js"></script>
+    <script src="../content/bootstrap-datatable/js/dataTables.bootstrap-1.10.10.min.js"></script>
+    <script src="../content/My97DatePicker/WdatePicker.js"></script>
+    <script src="../content/Scripts/Calc.js"></script>
+    <script src="../content/tageditor/jquery.caret.min.js"></script>
+    <script src="../content/tageditor/jquery.tag-editor.js" charset="utf-8"></script>
+    <script src="../content/Scripts/common.js"></script>
+    <script src="../content/layer/layer.js"></script>
+    <script src="../content/cmtable/js/cmtable.js"></script>
+    <script src="../content/Scripts/tasklist.js"></script>
+    <script type="text/javascript">
+
+        var getTaskListUrl = "/dsp/uniteGetContentbilling";
+        //var deleteTaskUrl ="http://v.js165.com/iProbe/Api/ValidateApi/GetTaskList?isAudit=1";
+
+        function selectTaskList () {
+            var data = {
+            };
+            $.post(getTaskListUrl, data, function (res) {
+                    alert(res.total)
+            });
+        }
+    </script>
+</body>
+</html>

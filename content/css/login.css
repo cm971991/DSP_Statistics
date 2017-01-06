@@ -1,0 +1,372 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.logHead {
+    width: 100%;
+    height: 18%;
+}
+
+    .logHead .headImg {
+        vertical-align: middle;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .logHead img {
+        margin-left: 2rem;
+        width: 42rem;
+    }
+
+.logBody {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    height: 64%;
+}
+
+    .logBody img.logBanner {
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .logBody .logGet {
+        background-color: white;
+        position: absolute;
+        top: 14%;
+        right: 16%;
+        overflow: visible;
+        margin: 0 auto;
+        padding: 35px 0 30px;
+        width: 400px;
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.65);
+    }
+
+        .logBody .logGet .logDtip {
+            width: 88%;
+            border-bottom: 1px solid #08A1EF;
+            margin: 0px auto;
+            margin-bottom: 2rem;
+        }
+
+        .logBody .logGet .logD > p:nth-child(1) {
+            display: inline-block;
+            font-size: 26px;
+        }
+
+        .logBody .logGet .logD > p:nth-child(2) {
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 10px;
+            float: right;
+            color: #08A1EF;
+        }
+
+            .logBody .logGet .logD > p:nth-child(2):hover {
+                cursor: pointer;
+            }
+
+        .logBody .logGet .lgD {
+            width: 85%;
+            margin: 0px auto;
+            position: relative;
+            margin-bottom: 1.5rem;
+            height: 100%;
+            height: 100%;
+        }
+
+            .logBody .logGet .lgD > img:nth-child(1) {
+                position: absolute;
+                top: 16px;
+                left: 10px;
+            }
+
+            .logBody .logGet .lgD input {
+                text-indent: 3rem;
+                overflow: visible;
+                font-size: 16px;
+                padding: 24px 6px;
+            }
+
+            .logBody .logGet .lgD .imgyzm {
+                width: 30%;
+                height: 48px;
+                float: right;
+                overflow: hidden;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .logBody .logGet .lgD input.yzm {
+                width: 65%;
+                display: inline;
+            }
+
+            .logBody .logGet .lgD .btnyzm {
+                width: 30%;
+                overflow: hidden;
+                display: inline-block;
+                background-color: #08A1EF;
+                color: #fff;
+                text-align: center;
+                font-size: 15px;
+                cursor: pointer;
+                float: right;
+                padding: 9px 6px;
+                border-radius: 4px;
+                line-height: 30px;
+                display: inline;
+                margin-top: 1px;
+                border: none;
+            }
+
+        .logBody .logGet .errorMsg {
+            margin-bottom: 4px;
+        }
+
+            .logBody .logGet .errorMsg > p {
+                color: red;
+                font-size: 14px;
+                margin-bottom: 0px;
+            }
+
+    .logBody .logC {
+        width: 86%;
+        margin: 0px auto;
+    }
+
+        .logBody .logC button {
+            width: 100%;
+            height: 45px;
+            background-color: #08A1EF;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+
+.logFoot {
+    width: 100%;
+    height: 18%;
+    text-align: center;
+}
+
+    .logFoot > p:nth-child(1) {
+        letter-spacing: 3px;
+        padding-top: 40px;
+        font-size: 16px;
+        margin-bottom: 0px;
+        color: #606060;
+    }
+
+    .logFoot > p:nth-child(2) {
+        color: #606060;
+        padding-top: 6px;
+        font-size: 12px;
+    }
+
+
+/* background switcher */
+.bg-switch {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    top: 26%;
+    border-radius: 0px 10px 10px 0px;
+    padding: 10px 10px 0px 10px;
+    z-index: 999;
+    left: -90px;
+}
+
+    .bg-switch:hover {
+        left: 0;
+    }
+
+    .bg-switch .bgs .bg {
+        text-align: center;
+        margin-bottom: 13px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .bg-switch .bgs .bg.active img {
+            border-color: #000;
+        }
+
+        .bg-switch .bgs .bg img {
+            width: 80px;
+            height: 60px;
+            border: 2px solid #9fcef1;
+            cursor: pointer;
+        }
+
+
+/*********************************************loadingÐ§¹û***********************************************/
+
+#loading {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 20000;
+    margin-top: 0px;
+    top: 0px;
+    opacity: 0.4;
+}
+
+#loading-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    -webkit-animation: loading-center-absolute 1s infinite;
+    animation: loading-center-absolute 1s infinite;
+}
+
+.object {
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    float: left;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+    .object:nth-child(2n+0) {
+        margin-right: 0px;
+    }
+
+#object_one {
+    -webkit-animation: object_one 1s infinite;
+    animation: object_one 1s infinite;
+}
+
+#object_two {
+    -webkit-animation: object_two 1s infinite;
+    animation: object_two 1s infinite;
+}
+
+#object_three {
+    -webkit-animation: object_three 1s infinite;
+    animation: object_three 1s infinite;
+}
+
+#object_four {
+    -webkit-animation: object_four 1s infinite;
+    animation: object_four 1s infinite;
+}
+
+@-webkit-keyframes loading-center-absolute {
+    100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loading-center-absolute {
+    100% {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes object_one {
+    50% {
+        -ms-transform: translate(20px,20px);
+        -webkit-transform: translate(20px,20px);
+        transform: translate(20px,20px);
+    }
+}
+
+@keyframes object_one {
+    50% {
+        -ms-transform: translate(20px,20px);
+        -webkit-transform: translate(20px,20px);
+        transform: translate(20px,20px);
+    }
+}
+
+@-webkit-keyframes object_two {
+    50% {
+        -ms-transform: translate(-20px,20px);
+        -webkit-transform: translate(-20px,20px);
+        transform: translate(-20px,20px);
+    }
+}
+
+@keyframes object_two {
+    50% {
+        -ms-transform: translate(-20px,20px);
+        -webkit-transform: translate(-20px,20px);
+        transform: translate(-20px,20px);
+    }
+}
+
+@-webkit-keyframes object_three {
+    50% {
+        -ms-transform: translate(20px,-20px);
+        -webkit-transform: translate(20px,-20px);
+        transform: translate(20px,-20px);
+    }
+}
+
+@keyframes object_three {
+    50% {
+        -ms-transform: translate(20px,-20px);
+        -webkit-transform: translate(20px,-20px);
+        transform: translate(20px,-20px);
+    }
+}
+
+@-webkit-keyframes object_four {
+    50% {
+        -ms-transform: translate(-20px,-20px);
+        -webkit-transform: translate(-20px,-20px);
+        transform: translate(-20px,-20px);
+    }
+}
+
+@keyframes object_four {
+    50% {
+        -ms-transform: translate(-20px,-20px);
+        -webkit-transform: translate(-20px,-20px);
+        transform: translate(-20px,-20px);
+    }
+}

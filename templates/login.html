@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>内容计费系统</title>
+    <link href="../content/css/login.css" rel="stylesheet"/>
+    <link href="../content/css/animate.css" rel="stylesheet"/>
+    <link href="../content/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet"/>
+
+</head>
+<body ng-app="loginApp" ng-controller="loginController">
+    <!-- 头部 -->
+    <div class="logHead">
+        <div class="headImg">
+            <img src="../content/img/login/logo.png" />
+        </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="logBody">
+        <img class="logBanner" src="../content/img/login/banner.jpg" />
+        <!-- 短信登录 -->
+
+        <div class="logGet animated">
+            <!-- 头部提示信息 -->
+            <div class="logD logDtip">
+                <p>短信登录</p>
+            </div>
+            <!-- 输入框 -->
+            <div class="lgD form-group">
+                <img src="../content/img/login/logName.png" />
+                <input type="tel" class="form-control" maxlength="11" placeholder="手机号码" ng-model="phone" />
+            </div>
+            <div class="lgD form-group">
+                <img src="../content/img/login/logPwd.png" />
+                <input type="text" class="form-control yzm" maxlength="4" placeholder="图片验证码" ng-model="imagecode">
+                <img class="imgyzm" src="/iProbe/Image/GetImgCode" title="看不清？点击刷新图片" ng-click="sendImgCode()" />
+            </div>
+            <div class="lgD form-group">
+                <img src="../content/img/login/logPwd.png" />
+                <input type="tel" class="form-control yzm" maxlength="6" placeholder="短信验证码" ng-model="smscode">
+                <button class="btnyzm" ng-disabled="sendFlag" ng-click="sendCode()">发送验证码</button>
+            </div>
+            <div class="lgD form-group errorMsg" style="display:none;">
+                <p></p>
+            </div>
+            <div class="logC form-group">
+                <button ng-click="smsLogin()">登 录</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="logFoot">
+        <p>南京安讯科技有限责任公司</p>
+        <p>copyright@2016 南京安讯科技有限责任公司 版权所有</p>
+    </div>
+
+    <!-- 背景图选择 -->
+    <div class="bg-switch">
+        <div class="bgs">
+            <bkImg></bkImg>
+        </div>
+    </div>
+
+    <!-- 加载进度条 -->
+    <dspLoading></dspLoading>
+
+    <script>
+        function GetVirtual() {
+            try {
+                var virtual = "";
+                var currentUrl = window.location.href;
+                var list = currentUrl.replace("http://", "").split("/");
+                if (list.length > 1) {
+                    if (list[1] == "iProbe") {
+                        virtual = "http://" + list[0] + "/" + list[1];
+                    } else {
+                        virtual = "http://" + list[0];
+                    }
+                }
+                return virtual;
+            } catch (e) { return ""; }
+        }
+        var root = GetVirtual();
+        var loginUrl = root + "/Api/LoginApi/login";
+        var smsLoginUrl = root + "/Api/LoginApi/SmsLogin";
+        var getSendSmsUrl = root + "/Api/LoginApi/SendSms";
+        var setErrorCount = root + "/Api/LoginApi/SetErrorCount";
+        var logUri = root + "/Api/LogApi/Click";
+    </script>
+
+    
+    <script src="/iProbe/js/login?v=cd0iRWz5nPBuE3-0mar_mcxbYQRbR3EJzsFcguvLQ681"></script>
+
+</body>
+</html>
